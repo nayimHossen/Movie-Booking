@@ -38,7 +38,7 @@ const Navbar = () => {
           {/* md and lg navigation start*/}
           <div>
             <Link to="/">
-              <h2 className="text-4xl font-bold text-accent">Dentelo.</h2>
+              <h2 className="text-4xl font-bold text-accent">MovieCo.</h2>
             </Link>
           </div>
 
@@ -57,56 +57,19 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink
-                      to="about"
-                      style={({ isActive }) =>
-                        isActive ? activeStyle : undefined
-                      }
-                    >
-                      About
-                    </NavLink>
+                    <NavLink to="/">About</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink
-                      to="blogs"
-                      style={({ isActive }) =>
-                        isActive ? activeStyle : undefined
-                      }
-                    >
-                      Blogs
-                    </NavLink>
+                    <NavLink to="/">Blogs</NavLink>
                   </li>
                   <li className="font-bold">
-                    <NavLink
-                      to="contact"
-                      style={({ isActive }) =>
-                        isActive ? activeStyle : undefined
-                      }
-                    >
-                      Contact
-                    </NavLink>
+                    <NavLink to="/">Contact</NavLink>
                   </li>
 
                   <li className="font-bold">
-                    <NavLink
-                      to="login"
-                      style={({ isActive }) =>
-                        isActive ? activeStyle : undefined
-                      }
-                    >
-                      Login
-                    </NavLink>
+                    <NavLink to="/">Login</NavLink>
                   </li>
                 </ul>
-              </div>
-
-              <div>
-                <Link
-                  to="appointment"
-                  className="btn text-base-100 text-sm uppercase bg-gradient-to-r from-accent to-primary px-3 md:px-5"
-                >
-                  BOOK APPOINTMENT
-                </Link>
               </div>
             </div>
           </div>
@@ -142,24 +105,16 @@ const Navbar = () => {
                   <NavLink to="/home">Home</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/about">About Us</NavLink>
+                  <NavLink to="/">About Us</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="blogs">Blogs</NavLink>
+                  <NavLink to="/">Blogs</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="contact">Contact Us</NavLink>
+                  <NavLink to="/">Contact Us</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="login">Login</NavLink>
-                </li>
-                <li>
-                  <Link
-                    to="appointment"
-                    className="btn text-base-100 bg-gradient-to-r from-secondary to-primary px-7"
-                  >
-                    BOOK NOW
-                  </Link>
+                  <NavLink to="/">Login</NavLink>
                 </li>
               </ul>
             </div>
