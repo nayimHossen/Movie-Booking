@@ -19,7 +19,7 @@ const Booking = ({ movieData }) => {
         <div className="modal-box relative">
           <label
             htmlFor="booking-modal"
-            className="btn btn-sm btn-circle text-white bg-gradient-to-r from-accent to-primary absolute right-2 top-2"
+            className="btn btn-sm btn-circle text-white bg-primary absolute right-2 top-2"
           >
             ✕
           </label>
@@ -27,6 +27,37 @@ const Booking = ({ movieData }) => {
 
           {/* Modal from start */}
           <form onSubmit={handleSubmit(onSubmit)}>
+            {/* Name Input filed start */}
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="input input-bordered w-full"
+                {...register("name", {
+                  required: {
+                    value: true,
+                    message: "name is Required",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.name?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.name.message}
+                  </span>
+                )}
+                {errors.name?.type === "pattern" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.name.message}
+                  </span>
+                )}
+              </label>
+            </div>
+            {/* Name Input filed end */}
+
             {/* Email Input filed start */}
             <div className="form-control w-full">
               <label className="label">
@@ -62,26 +93,57 @@ const Booking = ({ movieData }) => {
             </div>
             {/* Email Input filed end */}
 
-            {/* Password Input filed start */}
+            {/* date Input filed start */}
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text">Select Date</span>
               </label>
               <input
-                type="password"
+                type="date"
+                placeholder="Select Date"
+                className="input input-bordered w-full"
+                {...register("date", {
+                  required: {
+                    value: true,
+                    message: "date is Required",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.date?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.date.message}
+                  </span>
+                )}
+                {errors.date?.type === "pattern" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.date.message}
+                  </span>
+                )}
+              </label>
+            </div>
+            {/* date Input filed end */}
+
+            {/* slots Input filed start */}
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text">Select Slots</span>
+              </label>
+              <select
+                type=""
                 placeholder="Password"
                 className="input input-bordered w-full"
                 {...register("password", {
                   required: {
                     value: true,
-                    message: "Password is Required",
-                  },
-                  minLength: {
-                    value: 6,
-                    message: "Must be 6 characters or longer",
+                    message: "Slot is Required",
                   },
                 })}
-              />
+              >
+                <option>09:00am - 12:00am</option>
+                <option>12:00am - 02:00pm</option>
+                <option>02:00pm - 05:00pm</option>
+              </select>
               <label className="label">
                 {errors.password?.type === "required" && (
                   <span className="label-text-alt text-red-500">
@@ -95,7 +157,7 @@ const Booking = ({ movieData }) => {
                 )}
               </label>
             </div>
-            {/* Password Input filed start */}
+            {/*slots Input filed start */}
 
             {/* Booking Button */}
             <input

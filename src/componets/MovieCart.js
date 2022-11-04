@@ -2,13 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const ServiceCart = ({ service }) => {
-  console.log(service.show);
   const { network, language, image, genres, id } = service.show;
 
   const navigate = useNavigate();
 
   const navigateSammery = (id) => {
-    console.log("clide");
     navigate(`/summery/${id}`);
   };
 

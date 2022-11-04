@@ -27,7 +27,7 @@ const Navbar = () => {
 
   // active link
   let activeStyle = {
-    color: "blue",
+    color: "green",
   };
 
   return (
@@ -105,16 +105,16 @@ const Navbar = () => {
                   <NavLink to="/home">Home</NavLink>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/">About Us</NavLink>
+                  <Link to="/">About Us</Link>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/">Blogs</NavLink>
+                  <Link to="/">Blogs</Link>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/">Contact Us</NavLink>
+                  <Link to="/">Contact Us</Link>
                 </li>
                 <li className="font-bold">
-                  <NavLink to="/">Login</NavLink>
+                  <Link to="/">Login</Link>
                 </li>
               </ul>
             </div>

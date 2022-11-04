@@ -15,8 +15,8 @@ const HomePage = () => {
     <>
       <HeroBanner />
       <div className="my-16 mx-auto container px-5">
-        <h4 className="text-2xl font-bold text-primary text-center my-12">
-          All Services
+        <h4 className="text-3xl font-bold text-primary text-center my-10">
+          Populer Movies
         </h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {moviesData.map((service) => (

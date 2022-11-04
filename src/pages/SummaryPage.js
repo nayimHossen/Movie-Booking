@@ -8,7 +8,6 @@ function SummaryPage() {
   const { network, language, image, summary } = movieData;
 
   const { id } = useParams();
-  console.log(movieData);
 
   useEffect(() => {
     fetch(`https://api.tvmaze.com/shows/${id}`)
