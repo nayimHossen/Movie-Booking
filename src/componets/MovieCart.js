@@ -1,8 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ServiceCart = ({ service }) => {
   console.log(service.show);
-  const { network, language, image, genres } = service.show;
+  const { network, language, image, genres, id } = service.show;
+
+  const navigate = useNavigate();
+
+  const navigateSammery = (id) => {
+    console.log("clide");
+    navigate(`/summery/${id}`);
+  };
+
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -18,7 +27,12 @@ const ServiceCart = ({ service }) => {
           <p>Language: {language}</p>
           <p>Type: {genres[0]}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary text-white">Summary</button>
+            <button
+              onClick={() => navigateSammery(id)}
+              className="btn btn-primary text-white"
+            >
+              Summary
+            </button>
           </div>
         </div>
       </div>
