@@ -33,7 +33,10 @@ function SummaryPage() {
           {summary}
           <div className="card-actions justify-end">
             {/* The button to open modal */}
-            <label htmlFor="my-modal-6" className="btn btn-primary text-white">
+            <label
+              htmlFor="booking-modal"
+              className="btn btn-primary text-white"
+            >
               Booking
             </label>
           </div>
